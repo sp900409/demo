@@ -1,0 +1,11 @@
+{% include base.html %}
+
+{% if Units %}
+    <ul>
+    {% for unit in Units %}
+        <li><a href="/#/{{ unit }}/">{{ unit.unit_no }}   {{ unit.unit_serial_number }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>no unit at all</p>
+{% endif %}
